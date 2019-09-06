@@ -2,7 +2,7 @@
 # This is the configuration to tell k8s to go to letsencrypt to issue certificate
 apiVersion: certmanager.k8s.io/v1alpha1
 kind: ClusterIssuer
-mtadata:
+metadata:
  name: letsencrypt-prod
 spec:
  acme:
