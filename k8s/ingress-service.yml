@@ -12,7 +12,7 @@ metadata:
 spec:
  # tell nginx where to get https cert from
  tls:
-  - host:
+  - hosts:
      - noneedrelax.com
      - www.noneedrelax.com
     secretName: noneedrelax-com
