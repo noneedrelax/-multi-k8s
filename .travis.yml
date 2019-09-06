@@ -25,9 +25,7 @@ before_install:
  - export PATH=$PATH:$HOME/.local/bin
 script:
  - docker run noneedrelax/react-test npm run test -- --coverage
-after_success:
- - "./docker_push.sh"
 deploy:
  # use the custom script to deploy
  provider: script
- script: bash ./deploy_k8s.sh
+ script: ./docker_push.sh && ./deploy_k8s.sh
